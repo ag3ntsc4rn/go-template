@@ -13,14 +13,6 @@ type Accessor interface {
 	Retrieve(n int) Person
 }
 
-func Put(a Accessor, p Person, n int) {
-	a.Save(p, n)
-}
-
-func Get(a Accessor, n int) Person {
-	return a.Retrieve(n)
-}
-
 type PersonService struct {
 	a Accessor
 }
